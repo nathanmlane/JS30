@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>keySequenceDetection</title>
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="hints">
+    <h1>To access the treasure you must first guess it's keeper.</h1>
+    <h5>I'll give you 3 hints. Type your guesses blindly, if you are correct the treasure shall be unveiled.</h5>
+    <div style="max-width: 300px;">
+      <ul>
+        <li style="margin-bottom: 1rem;">This person loves bacon</li>
+        <li style="margin-bottom: 1rem;">He began his career beside Shia LaBeouf</li>
+        <li>His nickname is the word you need to crack the code</li>
+      </ul>
+    </div>
+  </div>
+  <div class="answer">
+    <h2>That's right. It's the legendary character played by Steven Anthony Lawrence, Beans Aranguren</h2>
+    <h5>He's been waiting for thousands of years for someone to crack his code. He is finally free. Enjoy your treasure.</h5>
+    <img class="beans" alt="beans" src="beans.jpg">
+  </div>
+  <script>
+    const hints = document.querySelector('.hints');
+    const answer = document.querySelector('.answer');
+    const pressed = [];
+    const easterEgg = 'beans';
+    window.addEventListener('keyup', (e) => {
+      pressed.push(e.key);
+      pressed.splice(-easterEgg.length - 1, pressed.length - easterEgg.length);
+      console.log(pressed);
+      if (pressed.join('').includes(easterEgg)) {
+        hints.style.display = `none`;
+        answer.style.display = `flex`;
+      }
+    });
+  </script>
+</body>
+
+</html>

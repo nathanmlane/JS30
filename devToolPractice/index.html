@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Know Your Console.</title>
+  <link rel="icon" type="image/png" href="download.png">
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap" rel="stylesheet">
+  <title>devToolPractice</title>
 </head>
 <body>
-
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+<div style="display: flex; height: 95vh; width: 100vw; justify-content: center; align-items: center;">
+  <p style="font-family: 'Overpass Mono', monospace; margin: 0 auto;" onClick="makeRed()">Click on me to see my true colors.</p>
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
 
-    function makeGreen() {
+    function makeRed() {
       const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
+      p.style.backgroundColor = '#EF4343';
+      p.style.color = '#fff';
+      p.style.fontSize = '1.2rem';
+      p.style.textShadow = '2px 2px 0px #000';
+      p.style.borderRadius = '5px';
+      p.style.boxShadow = '2px 2px 10px rgba(0,0,0,.2)';
+      p.style.padding = '1rem';
     }
 
     // Regular

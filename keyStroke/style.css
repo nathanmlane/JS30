@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Overpass Mono', monospace;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: 'Overpass Mono', monospace;
+  text-align: center;
+}
+
+h5 {
+  margin-top: 0;
+  font-family: 'Overpass Mono', monospace;
+  text-align: center;
+  font-style: italic;
+}
+
+ul {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: 'Overpass Mono', monospace;
+}
+
+.hints {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.beans {
+  max-width: 400px;
+}
